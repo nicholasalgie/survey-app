@@ -6,10 +6,10 @@ from sqlalchemy import text
 
 NAMES = [
     "Alberto", "Alice", "Andres", "Caterina", "Cecilia", "Chiara", "Claudio",
-    "Danny", "Edoardo", "Elisa", "Enrico", "Federico", "Filippo", "Gabriele",
-    "Giovanna", "Giulia", "Giulietta", "Grace", "Inelda", "Irene", "Leonardo",
-    "Luca", "Ludovica", "Mario", "Nader", "Nicholas", "Roberto", "Simone",
-    "Tommaso", "Valentina", "Veronica", "Hazal", "Alessandra", "Marta", "Andrea"
+    "Danny", "Edoardo", "Elisa B.", "Elisa E.", "Enrico", "Federico", "Filippo", "Gabriele",
+    "Giulia R.", "Giulia D.", "Grace", "Inelda", "Irene", "Leonardo",
+    "Luca Te.", "Luca Tr.", "Ludovica", "Mario", "Nader", "Nicholas", "Roberto", "Simone",
+    "Tommaso", "Valentina", "Veronica", "Hazal", "Marta", "Andrea"
 ]
 
 QUESTION = "How well does the presentation reflect the purpose of Tiresia/Triadi?"
