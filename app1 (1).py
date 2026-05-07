@@ -8,7 +8,7 @@ NAMES = [
     "Alberto", "Alice", "Andres", "Caterina", "Cecilia", "Chiara", "Claudio",
     "Danny", "Edoardo", "Elisa B.", "Elisa E.", "Enrico", "Federico", "Filippo", "Gabriele",
     "Giulia R.", "Giulia D.", "Grace", "Inelda", "Irene", "Leonardo",
-    "Luca Te.", "Luca Tr.", "Ludovica", "Mario", "Nader", "Nicholas", "Roberto", "Simone",
+    "Luca Te.", "Luca Tr.", "Ludovica", "Nader", "Nicholas", "Roberto", "Simone",
     "Tommaso", "Valentina", "Veronica", "Hazal", "Marta", "Andrea"
 ]
 
