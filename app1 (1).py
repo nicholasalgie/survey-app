@@ -1,8 +1,8 @@
 import streamlit as st
-from streamlit.connections import SQLConnection
 import pandas as pd
 import matplotlib.pyplot as plt
 from datetime import datetime
+from sqlalchemy import text
 
 NAMES = [
     "Alberto", "Alice", "Andres", "Caterina", "Cecilia", "Chiara", "Claudio",
@@ -18,20 +18,20 @@ QUESTION = "How well does the presentation reflect the purpose of Tiresia/Triadi
 conn = st.connection("survey_db", type="sql", url="sqlite:///survey.db")
 
 with conn.session as s:
-    s.execute("""
+    s.execute(text("""
         CREATE TABLE IF NOT EXISTS responses (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
             timestamp TEXT,
             presented_by TEXT,
             score INTEGER
         )
-    """)
+    """))
     s.commit()
 
 def save_response(presented_by, score):
     with conn.session as s:
         s.execute(
-            "INSERT INTO responses (timestamp, presented_by, score) VALUES (:ts, :name, :score)",
+            text("INSERT INTO responses (timestamp, presented_by, score) VALUES (:ts, :name, :score)"),
             {"ts": datetime.now().strftime("%Y-%m-%d %H:%M:%S"), "name": presented_by, "score": score}
         )
         s.commit()
